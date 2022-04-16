@@ -16,4 +16,18 @@ public class DataBase {
     }
  }
 
+ public Statement selectSql(String selectSql) {
+     Statement statement = null;
+     try {
+         Class.forName("com.mysql.cj.jdbc.Driver");
+         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/student", "root", "");
+         statement = connection.createStatement();
+         ResultSet resultSet = statement.executeQuery(selectSql);
+
+     } catch (Exception e) {
+         System.out.println(e.getMessage());
+     }
+     return statement;
+ }
+
 }
