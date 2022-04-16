@@ -7,4 +7,7 @@ public  class Io {
        Scanner scanner = new Scanner(System.in);
       return scanner.next();
     }
+    public static void print(String value){
+        System.out.println(value);
+    }
 }
