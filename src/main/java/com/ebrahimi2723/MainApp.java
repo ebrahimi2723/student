@@ -173,4 +173,8 @@ public class MainApp {
        dataBase.sqlInsert(updateCapacity);
        print("Remove successfully");
    }
+
+    public static boolean checkisSoftDeleted(int value){
+        String sql = "SELECT `` FROM `user` WHERE 1"
+    }
 }
