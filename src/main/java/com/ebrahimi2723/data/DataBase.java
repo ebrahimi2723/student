@@ -2,7 +2,7 @@ package com.ebrahimi2723.data;
 import java.sql.*;
 public class DataBase {
 
- public void sql(String sqlCommand){
+ public void sqlInsert(String sqlCommand){
     String connectionUrl = "jdbc:mysql://localhost:3306/student";
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
@@ -23,11 +23,12 @@ public class DataBase {
          Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/student", "root", "");
          statement = connection.createStatement();
          ResultSet resultSet = statement.executeQuery(selectSql);
-
+         return statement;
      } catch (Exception e) {
          System.out.println(e.getMessage());
+         return null;
      }
-     return statement;
+
  }
 
 }

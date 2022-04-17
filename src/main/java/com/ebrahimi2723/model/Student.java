@@ -38,13 +38,4 @@ public class Student {
         this.isDeleted = isDeleted;
     }
 
-    @Override
-    public String toString() {
-        return "student{" +
-                "fullName='" + fullName + '\'' +
-                ", mark=" + mark +
-                ", year=" + year +
-                ", isDeleted=" + isDeleted +
-                '}';
-    }
 }
